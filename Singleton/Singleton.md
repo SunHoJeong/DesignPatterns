@@ -1,6 +1,6 @@
-Singleton Pattern
+# Singleton Pattern
 
-==============
+
 
 특정 클래스에 대해서 객체 인스턴스가 하나만 만들어지고 
 
@@ -152,7 +152,7 @@ public static synchronized Singleton getInstance(){
 
    - 성능 뛰어남
 
-   - multi-thread 환경에서 사용 가능
+   - multi-thread 환경에서 사용 가
 
      LazyHolder 클래스는 Singleton 클래스의 getInstance() 메서드에서 LazyHolder.INSTANCE를
 
