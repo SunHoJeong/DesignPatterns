@@ -79,9 +79,9 @@ public static synchronized Singleton getInstance(){
 
 위의 코드는 멀티 쓰레딩에서 발생하는 문제를 해결하였지만
 
-너무 큰 부분을 동기화 블럭으로 잡고 있어서 효율성에 문제가 있습니다
+너무 큰 부분을 동기화 블럭으로 잡고 있어서 효율성에 문제가 있다
 
-즉, 오버헤드가 너무 많이 발생합니다
+즉, 오버헤드가 너무 많이 발생한다
 
 
 
@@ -129,5 +129,34 @@ public static synchronized Singleton getInstance(){
 
    
 
+4. LazyHolder
 
+   ```
+   public class Singleton{
+   	private Singleton(){}
+   	public static Singleton getInstance(){
+   		return LazyHolder.INSTANCE;
+   	}
+   	
+   	private static class LazyHolder{
+   		private static final Singleton INSTANCE = new Sington();
+   	}
+   }
+   ```
+
+   - 현재까지 가장 완벽하게 평가받고 있음
+
+   - synchronized 키워드 필요 없음
+
+   - Java 버전 상관 없음
+
+   - 성능 뛰어남
+
+   - multi-thread 환경에서 사용 가능
+
+     LazyHolder 클래스는 Singleton 클래스의 getInstance() 메서드에서 LazyHolder.INSTANCE를
+
+     참조하는 순간 클래스가 로딩되며 초기화가 진행된다. 클래스를 로딩하고 초기화하는 시점은 thread-safe를
+
+     보장하기 때문에 volatile이나 synchronized 키워드가 없고 성능 또한 보장하기 때문에 훌륭한 기법이다.
 
