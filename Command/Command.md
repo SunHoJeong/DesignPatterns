@@ -6,7 +6,7 @@
 
 
 
-![command_classdiagram](/Users/snow/IdeaProjects/DesignPatterns/Command/command_classdiagram.png)
+![command_classdiagram](command_classdiagram.png)
 
 
 
