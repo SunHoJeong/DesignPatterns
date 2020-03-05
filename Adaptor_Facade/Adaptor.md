@@ -6,7 +6,7 @@
 
 
 
-![adaptor_class_diagram](/Users/snow/IdeaProjects/DesignPatterns/Adaptor_Facade/adaptor_class_diagram.png)
+![adaptor_class_diagram](adaptor_class_diagram.png)
 
 
 
