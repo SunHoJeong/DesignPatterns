@@ -23,7 +23,7 @@
 
 #### 가상 프록시(Virtual Proxy)
 
-![proxy_vietual](proxy_vietual.png)
+![proxy_virtual](proxy_virtual.png)
 
 - 가상 프록시는 생성하는 데 많은 비용이 드는 객체를 대신하는 역할
 - 실제로 객체가 필요하게 되기 전까지 객체의 생성을 미루는 기능도 제공
